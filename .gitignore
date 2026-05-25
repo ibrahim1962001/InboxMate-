@@ -43,11 +43,6 @@ prisma/dev.db-journal
 # prisma generated (v7 legacy folder)
 /src/generated
 
-# firebase
-.firebase/
-firebase-debug.log
-firebase-debug.*.log
-
 # vercel
 .vercel
 

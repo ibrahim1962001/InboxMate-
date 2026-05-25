@@ -2,8 +2,7 @@
 
 AI-powered Gmail assistant — web app (Phase 1). English & Arabic UI.
 
-**Repository:** [github.com/ibrahim1962001/InboxMate-](https://github.com/ibrahim1962001/InboxMate-)  
-**Firebase project:** `email-9e9fc`
+**Repository:** [github.com/ibrahim1962001/InboxMate-](https://github.com/ibrahim1962001/InboxMate-)
 
 ## Features (Phase 1)
 
@@ -14,7 +13,7 @@ AI-powered Gmail assistant — web app (Phase 1). English & Arabic UI.
 - Subscription requests + manual admin approval
 - Admin dashboard for pending payments
 
-## Setup
+## Setup (local)
 
 1. Copy `env.example` to `.env` and fill values.
 2. Create [Google Cloud OAuth credentials](https://console.cloud.google.com/):
@@ -33,14 +32,14 @@ npm run dev
 
 Open [http://localhost:3000/en](http://localhost:3000/en) or `/ar` for Arabic.
 
-## Deploy to Firebase
+### Database
 
-See **[docs/FIREBASE.md](docs/FIREBASE.md)** (Arabic step-by-step).
-
-Quick: Neon PostgreSQL → Firebase Secrets → `firebase deploy --only apphosting`
+- **Local:** SQLite (`DATABASE_URL="file:./dev.db"`)
+- **Production (optional):** [Neon](https://neon.tech) PostgreSQL — use `prisma/schema.postgresql.prisma` and run `npx prisma db push` with Neon connection string
 
 ## Roadmap
 
 - Chrome Extension
 - iOS / Android (React Native)
 - Smart categorization & cleanup rules
+- Deploy (Vercel / VPS) when ready
