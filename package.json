@@ -1,0 +1,45 @@
+{
+  "name": "mailgenie-pro",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "prisma generate && next build",
+    "start": "next start",
+    "lint": "eslint",
+    "postinstall": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:push": "prisma db push",
+    "build:firebase": "node scripts/prepare-firebase.mjs && prisma generate && next build",
+    "firebase:login": "firebase login",
+    "firebase:init": "firebase init apphosting",
+    "firebase:deploy": "firebase deploy --only apphosting"
+  },
+  "dependencies": {
+    "@auth/prisma-adapter": "^2.11.2",
+    "@prisma/client": "^6.19.0",
+    "clsx": "^2.1.1",
+    "dotenv": "^17.4.2",
+    "firebase": "^12.13.0",
+    "lucide-react": "^1.16.0",
+    "next": "16.2.6",
+    "next-auth": "^5.0.0-beta.30",
+    "next-intl": "^4.1.0",
+    "openai": "^6.39.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "tailwind-merge": "^3.6.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.6",
+    "prisma": "^6.19.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

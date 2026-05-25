@@ -1,0 +1,82 @@
+{
+  "app": {
+    "name": "MailGenie Pro",
+    "tagline": "AI-powered email assistant for Gmail"
+  },
+  "nav": {
+    "inbox": "Inbox",
+    "compose": "Compose",
+    "settings": "Settings",
+    "subscription": "Subscription",
+    "admin": "Admin",
+    "signIn": "Sign in with Google",
+    "signOut": "Sign out"
+  },
+  "landing": {
+    "hero": "Manage Gmail smarter with AI",
+    "subtitle": "Draft emails, organize your inbox, and stay productive — in English or Arabic.",
+    "cta": "Get started",
+    "features": {
+      "gmail": "Full Gmail sync",
+      "ai": "AI-powered composition",
+      "organize": "Smart organization",
+      "bilingual": "English & Arabic"
+    }
+  },
+  "inbox": {
+    "title": "Unified Inbox",
+    "empty": "No messages yet. Connect Gmail to sync your inbox.",
+    "refresh": "Refresh",
+    "categories": {
+      "all": "All",
+      "important": "Important",
+      "promotional": "Promotional",
+      "subscription": "Subscriptions"
+    }
+  },
+  "compose": {
+    "title": "Compose with AI",
+    "to": "To",
+    "subject": "Subject",
+    "prompt": "What should this email say?",
+    "tone": "Tone",
+    "language": "Language",
+    "generate": "Generate draft",
+    "send": "Send email",
+    "body": "Message body",
+    "tones": {
+      "professional": "Professional",
+      "friendly": "Friendly",
+      "formal": "Formal"
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Interface language",
+    "account": "Account",
+    "plan": "Current plan"
+  },
+  "subscription": {
+    "title": "Subscription plans",
+    "free": "Free",
+    "monthly": "Monthly — $9.99",
+    "annual": "Annual — $79.99",
+    "request": "Request upgrade (manual payment)",
+    "note": "Payment note / reference",
+    "submit": "Submit payment request",
+    "pending": "Your request is pending admin approval."
+  },
+  "admin": {
+    "title": "Admin Dashboard",
+    "users": "Users",
+    "payments": "Payment requests",
+    "approve": "Approve",
+    "reject": "Reject",
+    "noPending": "No pending payments"
+  },
+  "common": {
+    "loading": "Loading…",
+    "error": "Something went wrong",
+    "save": "Save"
+  }
+}

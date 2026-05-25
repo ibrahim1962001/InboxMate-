@@ -1,0 +1,82 @@
+# Firebase App Hosting — https://firebase.google.com/docs/app-hosting/configure
+# Set secrets in Firebase Console → App Hosting → Backend → Environment
+
+runConfig:
+  minInstances: 0
+  maxInstances: 4
+  concurrency: 80
+  cpu: 1
+  memoryMiB: 512
+
+scripts:
+  buildCommand: node scripts/prepare-firebase.mjs && npm run build && npx prisma db push --skip-generate
+
+env:
+  - variable: NODE_ENV
+    value: production
+    availability:
+      - BUILD
+      - RUNTIME
+
+  # Public URL — update after first deploy with your real App Hosting URL
+  - variable: NEXTAUTH_URL
+    value: https://mailgenie-pro--email-9e9fc.us-central1.hosted.app
+    availability:
+      - BUILD
+      - RUNTIME
+
+  - variable: AUTH_SECRET
+    secret: AUTH_SECRET
+
+  - variable: GOOGLE_CLIENT_ID
+    secret: GOOGLE_CLIENT_ID
+
+  - variable: GOOGLE_CLIENT_SECRET
+    secret: GOOGLE_CLIENT_SECRET
+
+  - variable: DATABASE_URL
+    secret: DATABASE_URL
+
+  - variable: ADMIN_EMAIL
+    secret: ADMIN_EMAIL
+
+  - variable: OPENAI_API_KEY
+    secret: OPENAI_API_KEY
+    availability:
+      - RUNTIME
+
+  - variable: NEXT_PUBLIC_FIREBASE_API_KEY
+    value: AIzaSyBbcD_D58B-tmKF606NoH2XrIymre7KHLY
+    availability:
+      - BUILD
+      - RUNTIME
+
+  - variable: NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+    value: email-9e9fc.firebaseapp.com
+    availability:
+      - BUILD
+      - RUNTIME
+
+  - variable: NEXT_PUBLIC_FIREBASE_PROJECT_ID
+    value: email-9e9fc
+    availability:
+      - BUILD
+      - RUNTIME
+
+  - variable: NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
+    value: email-9e9fc.firebasestorage.app
+    availability:
+      - BUILD
+      - RUNTIME
+
+  - variable: NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
+    value: "813751432278"
+    availability:
+      - BUILD
+      - RUNTIME
+
+  - variable: NEXT_PUBLIC_FIREBASE_APP_ID
+    value: 1:813751432278:web:3cce2fb4f3bbb0144ab7f7
+    availability:
+      - BUILD
+      - RUNTIME
