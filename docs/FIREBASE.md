@@ -22,7 +22,9 @@ firebase login
 cd "d:\اضافة ايميل\mailgenie-pro"
 ```
 
-تأكد أن مشروع Firebase اسمه **`email`** (كما في `.firebaserc`) أو عدّل `.firebaserc`.
+تأكد أن مشروع Firebase هو **`email-9e9fc`** (كما في `.firebaserc`).
+
+**GitHub:** https://github.com/ibrahim1962001/InboxMate-
 
 ---
 
